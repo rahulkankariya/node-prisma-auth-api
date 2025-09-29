@@ -2,27 +2,27 @@ import Joi from 'joi';
 
 export const signupSchema = Joi.object({
   name: Joi.string().min(2).max(100).required().messages({
-    'string.base': 'name_required',
-    'string.empty': 'name_required',
-    'any.required': 'name_required'
+    'string.base': 'NAME_REQUIRED',
+    'string.empty': 'NAME_REQUIRED',
+    'any.required': 'NAME_REQUIRED'
   }),
   email: Joi.string().email().required().messages({
-    'string.email': 'email_invalid',
-    'any.required': 'email_required'
+    'string.email': 'EMAIL_INVALID',
+    'any.required': 'EMAIL_INVALID'
   }),
   password: Joi.string().min(6).required().messages({
-    'string.min': 'password_min',
-    'any.required': 'password_required'
+    'string.min': 'PASSWORD_MIN',
+    'any.required': 'PASSWORD_REQUIRED'
   })
 });
 
 export const loginSchema = Joi.object({
   email: Joi.string().email().required().messages({
-    'string.email': 'email_invalid',
-    'any.required': 'email_required'
+    'string.email': 'EMAIL_INVALID',
+    'any.required': 'EMAIL_REQUIRED'
   }),
   password: Joi.string().required().messages({
-    'any.required': 'password_required'
+    'any.required': 'PASSWORD_REQUIRED'
   })
 });
 
@@ -36,15 +36,15 @@ export const requestOtpSchema = Joi.object({
 
 export const resetPasswordSchema = Joi.object({
   email: Joi.string().email().required().messages({
-    'string.email': 'email_invalid',
-    'any.required': 'email_required'
+    'string.email': 'EMAIL_INVALID',
+    'any.required': 'EMAIL_REQUIRED'
   }),
   type: Joi.string().valid('RESET_PASSWORD', 'VERIFY_EMAIL').default('RESET_PASSWORD'),
   code: Joi.string().required().messages({
-    'any.required': 'otp_code_required'
+    'any.required': 'OTP_CODE_REQUIRED'
   }),
   newPassword: Joi.string().min(6).required().messages({
-    'string.min': 'password_min',
-    'any.required': 'new_password_required'
+    'string.min': 'PASSWORD_MIN',
+    'any.required': 'NEW_PASSWORD_REQUIRED'
   })
 });
