@@ -1,10 +1,22 @@
-FIRST DB IS CONNECTED IF DB NOT EXISTS ERROR
-# DB NOT EXISTS
+#PROJECT NODEJS -ORM -PRISMA -POSTGRESQL -TYPESCRIPT -EXPRESS  -JWT -BCRYPT -JOI
+
+#FIRST STEP
+npm install
+
+# if create database manually then skip below step otehrwise follow below step
 
 npx prisma migrate dev --name init
 
-# MODELS NOT CREATE
 
-# TABLE CREATION FUIRST TIME
+# if manually table geneater othewise 
+  npx prisma generate   
 
-npx prisma generate   
+
+got run PROJECT
+
+npm run dev
+
+
+
+
+
