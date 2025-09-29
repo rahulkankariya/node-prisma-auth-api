@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as authService from '../services/authservice';
+import * as authService from '../services/authService';
 import { signupSchema, loginSchema, requestOtpSchema, resetPasswordSchema } from '../validators/auth.validator';
 import { sendResponse } from '../utils/responseHandler';
 

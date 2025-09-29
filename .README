@@ -1,0 +1,10 @@
+FIRST DB IS CONNECTED IF DB NOT EXISTS ERROR
+# DB NOT EXISTS
+
+npx prisma migrate dev --name init
+
+# MODELS NOT CREATE
+
+# TABLE CREATION FUIRST TIME
+
+npx prisma generate   
