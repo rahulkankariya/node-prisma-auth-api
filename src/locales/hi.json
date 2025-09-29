@@ -1,0 +1,16 @@
+{
+  "USER_CREATED": "उपयोगकर्ता सफलतापूर्वक बनाया गया",
+  "INVALID_CREDENTIALS": "ईमेल या पासवर्ड अमान्य है",
+  "OTP_SENT": "आपके ईमेल पर OTP भेज दिया गया है",
+  "OTP_INVALID": "अमान्य या समाप्‍त OTP",
+  "PASSWORD_RESET": "पासवर्ड सफलतापूर्वक रीसेट किया गया",
+  "PROFILE_UPDATED": "प्रोफ़ाइल अपडेट हो गई",
+  "UNAUTHORIZED": "अप्राधिकृत",
+  "name_required": "Name is required",
+  "email_required": "Email is required",
+  "email_invalid": "Please provide a valid email",
+  "password_required": "Password is required",
+  "password_min": "Password must be at least 6 characters long",
+  "otp_code_required": "OTP code is required",
+  "new_password_required": "New password is required"
+}

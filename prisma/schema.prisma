@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ===== User Model =====
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  password   String
+  avatar     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relation to OTPs (one-to-many)
+  otps       OTP[]
+}
+
+// ===== OTP Model =====
+model OTP {
+  id        Int      @id @default(autoincrement())
+  code      String
+  type      String   // 'RESET_PASSWORD' | 'VERIFY_EMAIL'
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  createdAt DateTime @default(now())
+
+  // Only one OTP per user per type
+  @@unique([userId, type])
+}
