@@ -17,5 +17,7 @@
   "PASSWORD_REQUIRED": "Password is required",
   "PASSWORD_MIN": "Password must be at least 6 characters long",
   "OTP_CODE_REQUIRED": "OTP code is required",
-  "NEW_PASSWORD_REQUIRED": "New password is required"
+  "NEW_PASSWORD_REQUIRED": "New password is required",
+  "PASSWORD_RESET_SUCCESS": "Password has been reset successfully",
+  "PROFILE_FETCHED": "Profile fetched successfully"
 }

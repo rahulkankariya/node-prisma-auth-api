@@ -18,5 +18,16 @@ npm run dev
 
 
 
+.env fil values
+
+
+DATABASE_URL="postgresql://postgres:123456@localhost:5432/mydb?schema=public"
+
+JWT_SECRET="1234567890abcdef"
+JWT_EXPIRES_IN=604800
+BCRYPT_SALT=10
+EMAIL_USER="email_id"
+EMAIL_PASS="app_password"
+PORT=5000
 
 
